@@ -158,7 +158,11 @@ let app = new Vue({
         currentchatusername: function(){
             let username = this.contacts[this.selectedchat].name
             return username
-        }
+        },
+        deletemess: function(element, index){
+            let thismessage = this.contacts[this.selectedchat].messages
+            thismessage.splice(index,1)
+        },
     }
 });
 Vue.config.devtools = true

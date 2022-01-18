@@ -229,6 +229,7 @@ body{
     min-width: 100px;
     max-width: 250px;
     word-wrap: break-word;
+    position: relative;
 }
 
 .messagedate{
@@ -242,6 +243,7 @@ body{
     background-color: #fff;
     float: left;
     border-radius: 0px 10px 10px 10px;
+    padding-left: 30px;
     
 }
 
@@ -249,4 +251,61 @@ body{
     background-color: #ddf9c6;
     float: right;
     border-radius: 10px 0px 10px 10px;
+    padding-right: 30px;
+}
+
+.messageoptions{
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.received .messageoptions{
+    left: 12px;
+}
+
+.sent .messageoptions{
+    right: 12px;
+}
+
+.message:hover .messageoptions{
+    display: block;
+}
+
+.messageoptionmenu{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: 5px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-transform: capitalize;
+}
+
+.messageoptionmenu div:nth-child(1){
+    border-bottom: 2px solid #3e3e3e;
+    width: 100%;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.messageoptions:hover .messageoptionmenu{
+    display: flex !important;
+}
+
+.messageoptionmenu:hover .messageoptionmenu{
+    display: flex !important;
+}
+
+.received .messageoptionmenu{
+    background-color: #c3c9c9;
+    left: 2px;
+}
+
+.sent .messageoptionmenu{
+    background-color: white;
+    right: 2px;
 }

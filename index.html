@@ -78,6 +78,15 @@
                     <div v-for="(element, index) in contacts[selectedchat].messages">
                         <div>
                             <div class="message" :class="message(index)">
+
+                                <div class="messageoptions">
+                                    <i class="fas fa-angle-down"></i>
+                                    <div class="messageoptionmenu">
+                                        <div>info</div>
+                                        <div @click="deletemess(element, index)">delete</div>
+                                    </div>
+                                </div>
+                                
                                 {{contacts[selectedchat].messages[index].text}}
                                 <div class="messagedate">{{contacts[selectedchat].messages[index].date}}</div>
                             </div>
