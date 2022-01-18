@@ -114,6 +114,26 @@ body{
     height: 100px;
     background-color: #ffffff;
     border-left: 3px solid #e0e1e1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.textbar input{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e0e1e1;
+    padding: 10px;
+    color: #2f3131;
+}
+
+.textbar .fa{
+    font-size: 25px;
+    color: #a0a5a5;
+    cursor: pointer;
+    padding-bottom: 3px;
 }
 
 .chatmain{

@@ -87,39 +87,37 @@ let app = new Vue({
 
         selectedchat: "0",
         searchinput: "",
+        messageinput:"",
 	},
 
 	methods: {
-        avatarpicker: function(index){
+        avatarpicker: function(index){  //restituisce l'avatar
             let temp = "img/"+ this.contacts[index].avatar +".png"
             return temp
         },
-        selectchat: function(index){
+        selectchat: function(index){    //selezione della chat da visualizzare
             this.selectedchat = "";
             this.selectedchat = index
             console.log( index , this.contacts[index].name)
         },
-        message: function(index){
+        message: function(index){   //recived / sent   class
             if(this.contacts[this.selectedchat].messages[index].status == "received"){
                 return "received"
             }else{
                 return "sent"
             }
         },
-        lastmessage: function(element, index){
+        lastmessage: function(element, index){  //return last message
             let last = element.messages[element.messages.length - 1].text
             return last
         },
-        search: function(element, index){
+        search: function(element, index){   //contactlist search
             if(this.searchinput != "" && element.name.includes(this.searchinput)){
                 return true
             }else if(this.searchinput == ""){
                 return true
             }   
         },
-        capitalizeFirstLetter: function(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
           
     }
 });
