@@ -83,13 +83,20 @@ let app = new Vue({
             }],
             },
 
-            ]
+        ],
+
+        selectedchat: "0",
 	},
 
 	methods: {
         avatarpicker: function(index){
             let temp = "img/"+ this.contacts[index].avatar +".png"
             return temp
+        },
+        selectchat: function(index){
+            this.selectedchat = "";
+            this.selectedchat = index
+            console.log( index , this.contacts[index].name)
         }
     }
 });

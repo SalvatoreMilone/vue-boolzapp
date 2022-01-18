@@ -20,7 +20,7 @@
                 <div class="sectionhead"></div>
 
                 <div class="contactcontainer">
-                    <div class="contactitem" v-for="(element, index) in contacts">
+                    <div class="contactitem" v-for="(element, index) in contacts" @click="selectchat(index)">
 
                         <div class="contactimg">
                             <img :src="avatarpicker(index)" alt="alt">
@@ -46,11 +46,13 @@
                 <div class="sectionhead"></div>
 
                 <div class="chatmain">
-
+                    <div class="message" v-for="(element, index) in contacts[selectedchat].messages">
+                        {{contacts[selectedchat].messages[index].text}}
+                    </div>
                 </div>
 
                 <div class="textbar"></div>
-                
+
             </div>
         </div>
 
