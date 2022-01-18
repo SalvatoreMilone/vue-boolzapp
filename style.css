@@ -77,4 +77,25 @@ body{
 .chatmain{
     height: calc(100% - 200px);
     background-color: rgb(172, 206, 172);
+    display: flex;
+    flex-direction: column;
+}
+
+.message{
+    margin: 10px 0;
+    height: 50px;
+    padding: 10px;
+}
+
+.received{
+    background-color: red;
+    float: left;
+    border-radius: 10px 10px 0px 10px;
+
+}
+
+.sent{
+    background-color: green;
+    float: right;
+    border-radius: 10px 10px 10px 0;
 }

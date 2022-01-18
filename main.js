@@ -97,6 +97,13 @@ let app = new Vue({
             this.selectedchat = "";
             this.selectedchat = index
             console.log( index , this.contacts[index].name)
+        },
+        message: function(index){
+            if(this.contacts[this.selectedchat].messages[index].status == "received"){
+                return "received"
+            }else{
+                return "sent"
+            }
         }
     }
 });

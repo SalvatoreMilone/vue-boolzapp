@@ -46,8 +46,10 @@
                 <div class="sectionhead"></div>
 
                 <div class="chatmain">
-                    <div class="message" v-for="(element, index) in contacts[selectedchat].messages">
-                        {{contacts[selectedchat].messages[index].text}}
+                    <div v-for="(element, index) in contacts[selectedchat].messages">
+                        <div>
+                            <div class="message" :class="message(index)">{{contacts[selectedchat].messages[index].text}}</div>
+                        </div>
                     </div>
                 </div>
 
