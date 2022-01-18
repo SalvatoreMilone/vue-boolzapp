@@ -36,16 +36,18 @@
                             <img :src="avatarpicker(index)" alt="alt">
                         </div>
 
-                        <div class="w100"> 
+                        <div class="contactinfo"> 
                             <div class="contactname">
-                                {{element.name}}
+                                <div>
+                                    <span>{{element.name}}</span>  <span>{{lastmesdate(element, index)}}</span>
+                                </div>
+                                <div class="textoverflow">
+                                    {{lastmessage(element, index)}}
+                                </div>
                             </div>
     
-                            <div class="textoverflow">
-                                {{lastmessage(element, index)}}
-                            </div>
                         </div>
-
+                        
                     </div>
                 </div>
 

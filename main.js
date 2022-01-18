@@ -113,6 +113,10 @@ let app = new Vue({
             let last = element.messages[element.messages.length - 1].text
             return last
         },
+        lastmesdate: function(element, index){
+            let last = element.messages[element.messages.length - 1].date
+            return last
+        },
         search: function(element, index){   //contactlist search
             if(this.searchinput != "" && element.name.includes(this.searchinput)){
                 return true
