@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="/favicon.ico" /> -->
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,20 +19,27 @@
 
                 <div class="sectionhead"></div>
 
+                <!-- search  -->
+                <div class="contactsearch">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="search from your contact">
+                </div>
+
+                <!-- container -->
                 <div class="contactcontainer">
                     <div class="contactitem" v-for="(element, index) in contacts" @click="selectchat(index)">
-
-                        <div class="contactimg">
+                                    
+                        <div class="contactimg">  <!-- avatar  -->
                             <img :src="avatarpicker(index)" alt="alt">
                         </div>
 
-                        <div>
+                        <div class="w100"> 
                             <div>
                                 {{element.name}}
                             </div>
     
-                            <div>
-                                lastmessage
+                            <div class="textoverflow">
+                                {{lastmessage(element, index)}}
                             </div>
                         </div>
 
@@ -41,10 +48,10 @@
 
             </div>
 
+            <!-- chat section -->
             <div class="chatsection">
 
                 <div class="sectionhead"></div>
-
                 <div class="chatmain">
                     <div v-for="(element, index) in contacts[selectedchat].messages">
                         <div>

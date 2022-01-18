@@ -104,6 +104,11 @@ let app = new Vue({
             }else{
                 return "sent"
             }
+        },
+        lastmessage: function(element, index){
+            let last = element.messages[element.messages.length - 1].text
+            console.log(last)
+            return last
         }
     }
 });
