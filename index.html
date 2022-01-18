@@ -14,8 +14,44 @@
     <div id="root">
 
         <div class="container">
-            <div class="contactsection"></div>
-            <div class="chatsection"></div>
+            <!-- contact section -->
+            <div class="contactsection">
+
+                <div class="sectionhead"></div>
+
+                <div class="contactcontainer">
+                    <div class="contactitem" v-for="(element, index) in contacts">
+
+                        <div class="contactimg">
+                            <img :src="avatarpicker(index)" alt="alt">
+                        </div>
+
+                        <div>
+                            <div>
+                                {{element.name}}
+                            </div>
+    
+                            <div>
+                                lastmessage
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="chatsection">
+
+                <div class="sectionhead"></div>
+
+                <div class="chatmain">
+
+                </div>
+
+                <div class="textbar"></div>
+                
+            </div>
         </div>
 
     </div>

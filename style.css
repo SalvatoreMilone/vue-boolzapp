@@ -28,12 +28,50 @@ body{
     display: flex;
 }
 
+/* contact section */
 .contactsection{
     background-color: #fdfdfb;
     width: 30%;
 }
 
+.contactitem{
+    border-bottom: 3px solid #c3c9c9;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.contactitem:hover{
+    background-color: #e9f0f0;
+}
+
+.contactsection .sectionhead{
+    border-right: 3px solid #c3c9c9;
+    border-bottom: 3px solid #c3c9c9;;
+}
+
+.sectionhead{
+    height: 100px;
+    background-color: #e0e1e1;
+}
+
+.contactimg img{
+    width: 50px;
+}
+
+/* chat section */
 .chatsection{
     background-color: #c3c9c9;
     width: 70%;
+}
+
+.textbar{
+    height: 100px;
+    background-color: #ffffff;
+    border-left: 3px solid #e0e1e1;
+}
+
+.chatmain{
+    height: calc(100% - 200px);
+    background-color: rgb(172, 206, 172);
 }
