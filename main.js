@@ -118,7 +118,14 @@ let app = new Vue({
                 return true
             }   
         },
-          
+        sendmessage: function(){
+            this.contacts[this.selectedchat].messages.push({
+                date: '10/01/2020 15:30:55',
+                text: this.messageinput,
+                status: 'sent'
+        },)
+            this.messageinput = ""
+        }
     }
 });
 Vue.config.devtools = true
