@@ -22,12 +22,12 @@
                 <!-- search  -->
                 <div class="contactsearch">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="search from your contact">
+                    <input type="text" placeholder="search from your contact" v-model="searchinput">
                 </div>
 
                 <!-- container -->
                 <div class="contactcontainer">
-                    <div class="contactitem" v-for="(element, index) in contacts" @click="selectchat(index)">
+                    <div class="contactitem" v-for="(element, index) in contacts" @click="selectchat(index)" :class="{show: search(element, index)}">
                                     
                         <div class="contactimg">  <!-- avatar  -->
                             <img :src="avatarpicker(index)" alt="alt">

@@ -48,6 +48,7 @@ body{
     display: flex;
     align-items: center;
     height: 100px;
+    display: none;
 }
 
 .contactitem:hover{
@@ -94,6 +95,10 @@ body{
 
 .contactsearch .fas{
     margin-right: 10px;
+}
+
+.show{
+    display: flex;
 }
 
 /* chat section */

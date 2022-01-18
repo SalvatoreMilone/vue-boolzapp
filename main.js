@@ -86,6 +86,7 @@ let app = new Vue({
         ],
 
         selectedchat: "0",
+        searchinput: "",
 	},
 
 	methods: {
@@ -107,9 +108,19 @@ let app = new Vue({
         },
         lastmessage: function(element, index){
             let last = element.messages[element.messages.length - 1].text
-            console.log(last)
             return last
+        },
+        search: function(element, index){
+            if(this.searchinput != "" && element.name.includes(this.searchinput)){
+                return true
+            }else if(this.searchinput == ""){
+                return true
+            }   
+        },
+        capitalizeFirstLetter: function(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
         }
+          
     }
 });
 Vue.config.devtools = true
