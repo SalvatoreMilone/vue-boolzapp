@@ -3,10 +3,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
     background-color: #e0e1e1;
+    color: #3e3e3e;
 }
 
 .greenbackground{
@@ -33,40 +35,38 @@ body{
     border-bottom: 3px solid #c3c9c9;
 }
 
-.w100{
-    width: 100%;
-}
 /* contact section */
 .contactsection{
     background-color: #fdfdfb;
     width: 30%;
     overflow-y: auto;
 }
-
+            /* contactitem */
 .contactitem{
-    border-bottom: 3px solid #c3c9c9;
+    border-bottom: 2px solid #c3c9c9;
     display: flex;
     align-items: center;
     height: 100px;
     display: none;
+    padding: 20px;
 }
 
 .contactitem:hover{
-    background-color: #e9f0f0;
+    background-color: #eaeaeb;
 }
 
 .contactsection .sectionhead{
     border-right: 1px solid #c3c9c9;
 }
 
-.contactsearch{
-    height: 70px;
-    background-color: #e9f0f0;
-    border-bottom: 3px solid #c3c9c9;;
+.contactitem.active{
+    background-color: #eaeaeb;
 }
 
 .contactimg img{
-    width: 50px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
 .textoverflow{
@@ -75,6 +75,20 @@ body{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+.w100{
+    width: 100%;
+}
+
+            /*contact search*/
+
+.contactsearch{
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 3px solid #c3c9c9;;
+}
+
 
 .contactsearch{
     display: flex;
@@ -91,6 +105,7 @@ body{
     padding: 20px;
     border-radius: 20px;
     color: #a0a5a5;
+    background-color: #eaeaeb;
 }
 
 .contactsearch .fas{
@@ -112,7 +127,7 @@ body{
 
 .textbar{
     height: 100px;
-    background-color: #ffffff;
+    background-color: #efedec;
     border-left: 3px solid #e0e1e1;
     display: flex;
     justify-content: space-evenly;
@@ -121,26 +136,28 @@ body{
 
 .textbar input{
     width: 80%;
-    height: 40px;
-    border-radius: 20px;
+    height: 50px;
+    border-radius: 25px;
     border: none;
-    background-color: #e0e1e1;
+    background-color: #fff;
     padding: 10px;
     color: #2f3131;
 }
 
 .textbar .fa{
     font-size: 25px;
-    color: #a0a5a5;
+    color: #8c8d8c;
     cursor: pointer;
     padding-bottom: 3px;
 }
 
 .chatmain{
     height: calc(100% - 200px);
-    background-color: rgb(172, 206, 172);
+    background-color: #e1dad6;
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
+    overflow-y: auto;
 }
 
 .message{
@@ -149,17 +166,25 @@ body{
     min-height: 50px;
     min-width: 100px;
     max-width: 250px;
+    word-wrap: break-word;
+}
+
+.messagedate{
+    color: #a0a5a5;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 3px ;
 }
 
 .received{
-    background-color: red;
+    background-color: #fff;
     float: left;
-    border-radius: 10px 10px 0px 10px;
-
+    border-radius: 0px 10px 10px 10px;
+    
 }
 
 .sent{
-    background-color: green;
+    background-color: #ddf9c6;
     float: right;
-    border-radius: 10px 10px 10px 0;
+    border-radius: 10px 0px 10px 10px;
 }

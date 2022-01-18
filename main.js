@@ -88,6 +88,8 @@ let app = new Vue({
         selectedchat: "0",
         searchinput: "",
         messageinput:"",
+        respond: "",
+        
 	},
 
 	methods: {
@@ -119,12 +121,32 @@ let app = new Vue({
             }   
         },
         sendmessage: function(){
+            
             this.contacts[this.selectedchat].messages.push({
-                date: '10/01/2020 15:30:55',
+                date: dayjs().format(),
                 text: this.messageinput,
                 status: 'sent'
-        },)
-            this.messageinput = ""
+            },)
+            this.messageinput = "";
+
+            temp = this.contacts[this.selectedchat];
+
+            setTimeout(function(){
+                temp.messages.push({
+                    date: dayjs().format(),
+                    text: "ok",
+                    status: 'received'
+                    },
+                )
+            },1000);
+
+        },
+        selectedchatfunc: function(element, index){
+            if(this.selectedchat == index){
+                return true
+            }else{
+                return false
+            }
         }
     }
 });

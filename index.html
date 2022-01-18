@@ -27,14 +27,17 @@
 
                 <!-- container -->
                 <div class="contactcontainer">
-                    <div class="contactitem" v-for="(element, index) in contacts" @click="selectchat(index)" :class="{show: search(element, index)}">
+                    <div class="contactitem"
+                    v-for="(element, index) in contacts"
+                    @click="selectchat(index)"
+                    :class="{show: search(element, index),active: selectedchatfunc(element, index)}">
                                     
                         <div class="contactimg">  <!-- avatar  -->
                             <img :src="avatarpicker(index)" alt="alt">
                         </div>
 
                         <div class="w100"> 
-                            <div>
+                            <div class="contactname">
                                 {{element.name}}
                             </div>
     
@@ -55,7 +58,11 @@
                 <div class="chatmain">
                     <div v-for="(element, index) in contacts[selectedchat].messages">
                         <div>
-                            <div class="message" :class="message(index)">{{contacts[selectedchat].messages[index].text}}</div>
+                            <div class="message" :class="message(index)">
+                                {{contacts[selectedchat].messages[index].text}}
+                                <div class="messagedate">{{contacts[selectedchat].messages[index].date}}</div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -72,6 +79,7 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
