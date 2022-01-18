@@ -58,6 +58,25 @@ body{
 
 .contactsection .sectionhead{
     border-right: 1px solid #c3c9c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.profileicons{
+    font-size: 25px;
+    color: #6a6a6a ;
+    cursor: pointer;
+}
+
+.profileicons i{
+    padding: 0 20px;
+}
+
+.contactsection .sectionhead img{
+    width: 60px;
+    border-radius: 50%;
 }
 
 .contactitem.active{
@@ -111,6 +130,7 @@ body{
 
 .contactsearch .fas{
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .show{

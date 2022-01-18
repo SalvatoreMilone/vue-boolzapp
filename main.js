@@ -118,7 +118,7 @@ let app = new Vue({
             return last
         },
         search: function(element, index){   //contactlist search
-            if(this.searchinput != "" && element.name.includes(this.searchinput)){
+            if(this.searchinput != "" && element.name.toLowerCase().includes(this.searchinput)){
                 return true
             }else if(this.searchinput == ""){
                 return true
