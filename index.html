@@ -63,7 +63,17 @@
             <!-- chat section -->
             <div class="chatsection">
 
-                <div class="sectionhead"></div>
+                <div class="sectionhead">
+                    <div>
+                        <img :src="currentchatavatar()" alt="">
+                        {{currentchatusername()}}
+                    </div>
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
                 <div class="chatmain">
                     <div v-for="(element, index) in contacts[selectedchat].messages">
                         <div>

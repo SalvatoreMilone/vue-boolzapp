@@ -94,13 +94,16 @@ let app = new Vue({
 
 	methods: {
         avatarpicker: function(index){  //restituisce l'avatar
-            let temp = "img/"+ this.contacts[index].avatar +".png"
-            return temp
+            let avatar = "img/"+ this.contacts[index].avatar +".png"
+            return avatar
+        },
+        currentchatavatar: function(){ //mostra l'avatar della persona con cui si sta chattando
+            let avatar = "img/"+ this.contacts[this.selectedchat].avatar +".png"
+            return avatar
         },
         selectchat: function(index){    //selezione della chat da visualizzare
             this.selectedchat = "";
             this.selectedchat = index
-            console.log( index , this.contacts[index].name)
         },
         message: function(index){   //recived / sent   class
             if(this.contacts[this.selectedchat].messages[index].status == "received"){
@@ -151,6 +154,10 @@ let app = new Vue({
             }else{
                 return false
             }
+        },
+        currentchatusername: function(){
+            let username = this.contacts[this.selectedchat].name
+            return username
         }
     }
 });
