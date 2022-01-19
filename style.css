@@ -40,6 +40,7 @@ body{
     background-color: #fdfdfb;
     width: 30%;
     overflow-y: auto;
+    overflow-x:hidden;
 }
             /* contactitem */
 
