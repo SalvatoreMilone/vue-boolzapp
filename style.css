@@ -244,7 +244,6 @@ body{
     float: left;
     border-radius: 0px 10px 10px 10px;
     padding-left: 30px;
-    
 }
 
 .sent{
@@ -254,8 +253,34 @@ body{
     padding-right: 30px;
 }
 
+.message.received::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+    border-radius: 4px 0 0 0;
+}
+
+.message.sent::before{
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #ddf9c6;
+    border-right: 20px solid transparent;
+    border-radius: 4px 0 0 0;
+}
+
+/* message options */
+
 .messageoptions{
-    display: block;
+    display: none;
     position: absolute;
     cursor: pointer;
 }
@@ -283,6 +308,7 @@ body{
     justify-content: center;
     align-items: flex-start;
     text-transform: capitalize;
+    border-radius: 5px;
 }
 
 .messageoptionmenu div:nth-child(1){
@@ -293,7 +319,7 @@ body{
 }
 
 .messageoptions:hover .messageoptionmenu{
-    display: flex !important;
+    display: block !important;
 }
 
 .messageoptionmenu:hover .messageoptionmenu{
