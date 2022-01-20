@@ -130,7 +130,7 @@ let app = new Vue({
         sendmessage: function(){
             
             this.contacts[this.selectedchat].messages.push({
-                date: dayjs().format(),
+                date: dayjs().format('MM/DD/YY H:mm'),
                 text: this.messageinput,
                 status: 'sent'
             },)
@@ -140,7 +140,7 @@ let app = new Vue({
 
             setTimeout(function(){
                 temp.messages.push({
-                    date: dayjs().format(),
+                    date: dayjs().format('MM/DD/YY H:mm'),
                     text: "ok",
                     status: 'received'
                     },
