@@ -217,6 +217,9 @@ body{
 .chatmain{
     height: calc(100% - 200px);
     background-color: #e1dad6;
+    background-image: url(img/chat-bg.jpg);
+    background-position:fill;
+    background-size:auto;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
@@ -231,6 +234,7 @@ body{
     max-width: 250px;
     word-wrap: break-word;
     position: relative;
+    box-shadow: 0 5px 7px 0px rgb(148, 148, 148);
 }
 
 .messagedate{
@@ -241,7 +245,7 @@ body{
 }
 
 .received{
-    background-color: #fff;
+    background-color: rgb(243, 243, 243);
     float: left;
     border-radius: 0px 10px 10px 10px;
     padding-left: 30px;
@@ -261,7 +265,7 @@ body{
     top: 0;
     width: 0;
     height: 0;
-    border-top: 20px solid #fff;
+    border-top: 20px solid rgb(243, 243, 243);
     border-left: 20px solid transparent;
     border-radius: 4px 0 0 0;
 }
