@@ -99,7 +99,11 @@
                     <i class="far fa-smile-beam fa"></i>
                     <i class="fas fa-paperclip fa"></i>
                     <input type="text" placeholder="Write a message" v-model="messageinput"  v-on:keyup.enter="sendmessage()">
-                    <i class="fas fa-microphone fa"></i>
+
+                    <div class="sendincons">
+                        <i class="fas fa-microphone fa" :class="{active: micicons()}"></i>
+                        <i class="fas fa-paper-plane fa" :class="{active: sendicons()}" @click="sendmessage()"></i>
+                    </div>
                 </div>
 
             </div>

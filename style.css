@@ -346,6 +346,14 @@ body{
     right: 2px;
 }
 
+.sendincons .fa{
+    display: none;
+}
+
+.sendincons .fa.active{
+    display: block;
+}
+
 /*     */
 
 @media all and (max-width: 800px){

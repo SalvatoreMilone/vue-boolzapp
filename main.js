@@ -128,7 +128,7 @@ let app = new Vue({
             }   
         },
         sendmessage: function(){
-            
+
             if (this.messageinput.trim()===''){
                 this.messageinput = "";
                 return
@@ -173,6 +173,20 @@ let app = new Vue({
                 String.prototype.trim= function() {
                     return this.replace(/^\s+/, '').replace(/\s+$/, '');
                 };
+            }
+        },
+        sendicons: function(){
+            if(this.messageinput == ""){
+                return false
+            }else{
+                return true
+            }
+        },
+        micicons: function(){
+            if(this.messageinput == ""){
+                return true
+            }else{
+                return false
             }
         }
     }
