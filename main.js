@@ -85,7 +85,7 @@ let app = new Vue({
 
         ],
 
-        selectedchat: "0",
+        selectedchat: 0,
         searchinput: "",
         messageinput:"",
         respond: "",
@@ -129,6 +129,11 @@ let app = new Vue({
         },
         sendmessage: function(){
             
+            if (this.messageinput.trim()===''){
+                this.messageinput = "";
+                return
+            }
+            
             this.contacts[this.selectedchat].messages.push({
                 date: dayjs().format('MM/DD/YY H:mm'),
                 text: this.messageinput,
@@ -163,6 +168,13 @@ let app = new Vue({
             let thismessage = this.contacts[this.selectedchat].messages
             thismessage.splice(index,1)
         },
+        trim: function(){
+            if (!('trim' in String.prototype)) {
+                String.prototype.trim= function() {
+                    return this.replace(/^\s+/, '').replace(/\s+$/, '');
+                };
+            }
+        }
     }
 });
 Vue.config.devtools = true
